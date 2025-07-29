@@ -1,0 +1,24 @@
+{
+  "name": "Blinko",
+  "description": "Self-hosted personal AI note tool",
+  "logo": "https://raw.githubusercontent.com/blinkospace/blinko/main/app/public/favicon.ico",
+  "repository": "https://github.com/skyevasquez/blinko.git",
+  "stack": "docker-compose",
+  "ports": [
+    {
+      "container": 1111,
+      "protocol": "http"
+    }
+  ],
+  "environment": {
+    "NODE_ENV": "production",
+    "NEXTAUTH_SECRET": "6$7n8mG*j9misp",
+    "DATABASE_URL": "postgresql://postgres:6$7n8mG*j9misp@blinko-postgres:5432/postgres"
+  },
+  "volumes": [
+    {
+      "host": "/opt/blinko/data",
+      "container": "/app/.blinko"
+    }
+  ]
+}

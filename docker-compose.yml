@@ -17,8 +17,8 @@ services:
       NODE_ENV: production
       NEXTAUTH_URL: http://localhost:1111
       NEXT_PUBLIC_BASE_URL: http://localhost:1111
-      NEXTAUTH_SECRET: my_ultra_secure_nextauth_secret
-      DATABASE_URL: postgresql://postgres:mysecretpassword@postgres:5432/postgres
+      NEXTAUTH_SECRET: 6$7n8mG*j9misp
+      DATABASE_URL: postgresql://postgres:6$7n8mG*j9misp@postgres:5432/postgres
     depends_on:
       postgres:
         condition: service_healthy
@@ -43,7 +43,7 @@ services:
     environment:
       POSTGRES_DB: postgres
       POSTGRES_USER: postgres
-      POSTGRES_PASSWORD: mysecretpassword
+      POSTGRES_PASSWORD: 6$7n8mG*j9misp
     healthcheck:
       test:
         ["CMD", "pg_isready", "-U", "postgres", "-d", "postgres"]
